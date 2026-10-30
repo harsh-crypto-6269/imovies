@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    background-color: #08090c;
+    color: #e2e8f0;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom scrollbars for seat maps and showtime lists */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0f14;
+}
+::-webkit-scrollbar-thumb {
+  background: #252a36;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a4256;
+}
+
+/* Screen curve illumination effect */
+.cinema-screen-glow {
+  background: radial-gradient(ellipse at 50% 0%, rgba(220, 38, 38, 0.45) 0%, rgba(220, 38, 38, 0.08) 50%, transparent 80%);
+}
+
+.cinema-screen-arc {
+  box-shadow: 0 4px 30px -4px rgba(239, 68, 68, 0.6);
+}
